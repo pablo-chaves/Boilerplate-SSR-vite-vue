@@ -15,7 +15,7 @@ const indexProd = isProd
     : ''
   const manifest = isProd ? require(`${distClient}/ssr-manifest.json`) : {}
 
-const defaultController = async (ctx: any, next: any) => {
+const spaController = async (ctx: any, next: any) => {
   let viteServer: vite.ViteDevServer | null = null
   try {
     const url = ctx.originalUrl
@@ -63,4 +63,4 @@ const defaultController = async (ctx: any, next: any) => {
   }
 }
 
-export default defaultController
+export default spaController
